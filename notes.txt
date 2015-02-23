@@ -1,0 +1,67 @@
+Phaser Tower Notes
+
+- A MVP tower defense game built in Phaser in 1-2 hours
+  - All assets hand-drawn, photographed, GIMPed into transparent PNG, etc.
+
+- Assets
+  - Background
+    - Mob entry hole
+    - Base exit hole
+    - Border/walls
+    - Unplaceable terrain
+    - Placeable terrain
+    - Trench/path tiles
+  - Baddies
+    - Marchers
+    - Runners (pygmy marchers)
+    - Fliers (still follow trench)
+  - Towers
+    - Gun
+    - Bomb (ground only)
+    - Rocket (air only)
+    - Death Ray
+    - Freeze Ray
+  - Bullets
+
+- Draw a background
+- Send baddies towards base
+- No pathing algorithm (this is towers and trenches)
+- Draw HUD
+  - Score
+  - Cash
+  - Towers
+    - Gun - cheap, low damage, perfect aim, air/ground
+    - Bomb - expensive, big damage, lousy aim, splash damage, ground only
+    - Rocket - expensive, big damage, perfect aim (seeker), air only
+    - Beam - expensive, low start damage, highly upgradable, perfect aim (instant), air/ground
+    - Freeze Ray - cheap, no damage, slows enemies briefly. Upgrade to do low damage or to stop enemies entirely
+
+- Draw background
+- Draw HUD
+  - Gray out towers we cannot afford
+  - Tapping an unavailable tower does nothing
+- Click a tower on board to select it
+  - It shows range and stats
+  - It shows upgrade buttons
+  - It shows sell button
+- Click a tower in HUD to buy it, it becomes draggable, shows range
+  - Tower turns red if you try to place it on top of an existing tower
+  - Drop tower to place
+
+- Baddies enter in waves, follow trench, try to reach base
+- Baddies reaching base do 1 point of damage; game over when base HP exhausted
+- Towers shoot at baddies when they're in range
+- Bullets, missiles, beams, etc, fly towards their targets
+
+- For 1-hour MVP: Guns only, Marchers only, no upgrades
+
+TODO:
+
+- Draw scene: background tiles with trench
+- Draw score/cash
+- Send baddies to base, base takes damage and dies
+- Place towers (hardcoded), baddies take damage and die
+- Draw tower placement HUD
+  - Tint tower gray when insufficient funds
+  - Tap and drag to place tower
+  - Tint tower red when cannot place
